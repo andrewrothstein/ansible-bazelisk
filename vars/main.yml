@@ -1,0 +1,10 @@
+---
+# vars file for bazelisk
+bazelisk_platform: '{{ bazelisk_os}}-{{ bazelisk_arch }}'
+bazelisk_rexe: bazelisk-{{ bazelisk_platform }}{{ bazelisk_exe_suffix | default("") }}
+bazelisk_url: '{{ bazelisk_mirror }}/{{ bazelisk_ver }}/{{ bazelisk_rexe }}'
+bazelisk_checksum: '{{ bazelisk_checksums[bazelisk_ver][bazelisk_platform] }}'
+
+bazelisk_exe: 'bazelisk-{{ bazelisk_platform }}-{{ bazelisk_ver }}{{ bazelisk_exe_suffix | default("") }}'
+bazelisk_install_exe: '{{ bazelisk_install_dir }}/{{ bazelisk_exe }}'
+bazelisk_link: '{{ bazelisk_install_dir }}/bazel'

@@ -1,0 +1,3 @@
+---
+bazelisk_os: windows
+bazelisk_exe_suffix: .exe
