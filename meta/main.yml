@@ -30,4 +30,7 @@ galaxy_info:
     - development
   role_name: bazelisk
 
-dependencies: []
+dependencies:
+  - role: andrewrothstein.openjdk
+    version: v2.0.1
+    openjdk_app: jdk
