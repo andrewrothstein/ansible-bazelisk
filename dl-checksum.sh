@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-VER=v0.0.8
+VER=v1.0
 DIR=~/Downloads
 MIRROR=https://github.com/bazelbuild/bazelisk/releases/download/${VER}
 
