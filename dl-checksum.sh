@@ -1,30 +1,33 @@
 #!/usr/bin/env sh
-VER=v1.0
 DIR=~/Downloads
-MIRROR=https://github.com/bazelbuild/bazelisk/releases/download/${VER}
+MIRROR=https://github.com/bazelbuild/bazelisk/releases/download
 
 dl()
 {
-    OS=$1
-    ARCH=$2
-    SUFFIX=${3:-}
-    PLATFORM=${OS}-${ARCH}
-    RFILE=bazelisk-${PLATFORM}${SUFFIX}
-    URL=$MIRROR/$RFILE
-    LFILE=$DIR/bazelisk-${PLATFORM}-${VER}${SUFFIX}
+    local ver=$1
+    local os=$2
+    local arch=$3
+    local suffix=${4:-}
+    local platform="${os}-${arch}"
+    local rfile=bazelisk-${platform}${suffix}
+    local url=$MIRROR/$ver/$rfile
+    local lfile=$DIR/bazelisk-${platform}-${ver}${suffix}
 
-    if [ ! -e $LFILE ];
+    if [ ! -e $lfile ];
     then
-        wget -q -O $LFILE $URL
+        wget -q -O $lfile $url
     fi
 
-    printf "    # %s\n" $URL
-    printf "    %s: sha256:%s\n" $PLATFORM `sha256sum $LFILE | awk '{print $1}'`
+    printf "    # %s\n" $url
+    printf "    %s: sha256:%s\n" $platform `sha256sum $lfile | awk '{print $1}'`
 }
 
-printf "  %s:\n" $VER
-dl darwin amd64
-dl linux amd64
-dl windows amd64 .exe
+dl_ver() {
+    local ver=$1
+    printf "  %s:\n" $ver
+    dl $ver darwin amd64
+    dl $ver linux amd64
+    dl $ver windows amd64 .exe
+}
 
-
+dl_ver ${1:-v1.1.0}
