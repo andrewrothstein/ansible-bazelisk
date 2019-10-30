@@ -32,5 +32,5 @@ galaxy_info:
 
 dependencies:
   - role: andrewrothstein.openjdk
-    version: v2.0.1
+    version: v2.0.3
     openjdk_app: jdk
