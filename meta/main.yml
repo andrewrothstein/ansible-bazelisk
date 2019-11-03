@@ -1,36 +1,34 @@
----
+dependencies:
+- openjdk_app: jdk
+  role: andrewrothstein.openjdk
+  version: 2.0.4
 galaxy_info:
   author: Andrew Rothstein
-  description: installs bazelisk
   company: BlackRock Financial Management
+  description: installs bazelisk
+  galaxy_tags:
+  - development
   license:
-    - MIT
+  - MIT
   min_ansible_version: 2.0
   platforms:
-    - name: EL
-      versions:
-        - all
-    - name: Fedora
-      versions:
-        - all
-    - name: Ubuntu
-      versions:
-        - all
-    - name: Alpine
-      versions:
-        - all
-    - name: Archlinux
-      versions:
-        - all
-    - name: Debian
-      versions:
-        - jessie
-        - stretch
-  galaxy_tags:
-    - development
+  - name: EL
+    versions:
+    - all
+  - name: Fedora
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Alpine
+    versions:
+    - all
+  - name: Archlinux
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - jessie
+    - stretch
   role_name: bazelisk
-
-dependencies:
-  - role: andrewrothstein.openjdk
-    version: v2.0.3
-    openjdk_app: jdk
