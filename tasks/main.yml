@@ -9,7 +9,7 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: download
+- name: downloading {{ bazelisk_url }} to {{ bazelisk_install_exe }}
   become: yes
   become_user: root
   get_url:
@@ -17,7 +17,7 @@
     dest: '{{ bazelisk_install_exe }}'
     mode: 0755
     checksum: '{{ bazelisk_checksum }}'
-- name: link
+- name: linking {{ bazelisk_link }} to {{ bazelisk_install_exe }}
   become: yes
   become_user: root
   file:
