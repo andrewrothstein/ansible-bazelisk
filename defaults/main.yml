@@ -1,6 +1,6 @@
 ---
 # defaults file for bazelisk
-bazelisk_ver: v1.7.4
+bazelisk_ver: v1.7.5
 bazelisk_mirror: https://github.com/bazelbuild/bazelisk/releases/download
 bazelisk_os: linux
 bazelisk_arch: amd64
@@ -98,3 +98,10 @@ bazelisk_checksums:
     linux-amd64: sha256:ab258203db518a54cbd5afa80864d5a3bb366058b95e7a7df4134b0b7765a378
     # https://github.com/bazelbuild/bazelisk/releases/download/v1.7.4/bazelisk-windows-amd64.exe
     windows-amd64: sha256:ea612bd2e16a793eb9a3d0d5591f08d0a4ff2f4e94540a51a4653f4368b3d019
+  v1.7.5:
+    # https://github.com/bazelbuild/bazelisk/releases/download/v1.7.5/bazelisk-darwin-amd64
+    darwin-amd64: sha256:c0eb71540aa6b9eece7f3d36d5857adb73e7cd92c496028ef8d1c3a4f9f23d60
+    # https://github.com/bazelbuild/bazelisk/releases/download/v1.7.5/bazelisk-linux-amd64
+    linux-amd64: sha256:0e721c3d07cc98847aa77027112a36784f0ccabf6de65a969c5a4e617422094b
+    # https://github.com/bazelbuild/bazelisk/releases/download/v1.7.5/bazelisk-windows-amd64.exe
+    windows-amd64: sha256:3370b9064a5bee879b675a77359ca14b3d2c5fa06364ae16b9ab2ff1773c9d0f
