@@ -1,6 +1,6 @@
 andrewrothstein.bazelisk
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-bazelisk.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-bazelisk)
+![Build Status](https://github.com/andrewrothstein/ansible-bazelisk/actions/workflows/build.yml/badge.svg)
 
 Installs [bazelisk](https://github.com/bazelbuild/bazelisk).
 
