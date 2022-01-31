@@ -1,7 +1,6 @@
 dependencies:
 - openjdk_app: jdk
-  role: andrewrothstein.openjdk
-  version: v2.0.17
+  name: andrewrothstein.temurin
 galaxy_info:
   author: Andrew Rothstein
   company: BlackRock Financial Management
@@ -21,8 +20,8 @@ galaxy_info:
     - 8
   - name: Fedora
     versions:
-    - 34
     - 35
+    - 36
   - name: Ubuntu
     versions:
     - bionic
