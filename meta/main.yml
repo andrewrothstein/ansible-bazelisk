@@ -1,3 +1,4 @@
+---
 dependencies:
 - openjdk_app: jdk
   name: andrewrothstein.temurin
@@ -11,6 +12,9 @@ galaxy_info:
   - MIT
   min_ansible_version: 2.0
   platforms:
+  - name: Alpine
+    versions:
+    - all
   - name: Debian
     versions:
     - bullseye

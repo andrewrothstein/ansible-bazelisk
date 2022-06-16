@@ -1,5 +1,7 @@
 ---
-- centos_8
+- alpine_3.15
+- alpine_3.16
+- alpine_edge
 - debian_bullseye
 - debian_buster
 - fedora_35
