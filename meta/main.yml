@@ -1,7 +1,4 @@
 ---
-dependencies:
-- openjdk_app: jdk
-  name: andrewrothstein.temurin
 galaxy_info:
   author: Andrew Rothstein
   company: BlackRock Financial Management
