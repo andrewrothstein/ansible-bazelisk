@@ -14,7 +14,7 @@
       paths:
         - '{{ role_path }}/vars'
 - name: downloading {{ bazelisk_url }} to {{ bazelisk_install_exe }}
-  become: yes
+  become: true
   become_user: root
   get_url:
     url: '{{ bazelisk_url }}'
@@ -22,7 +22,7 @@
     mode: 0755
     checksum: '{{ bazelisk_checksum }}'
 - name: linking {{ bazelisk_link }} to {{ bazelisk_install_exe }}
-  become: yes
+  become: true
   become_user: root
   file:
     src: '{{ bazelisk_install_exe }}'
