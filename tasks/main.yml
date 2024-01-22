@@ -1,10 +1,11 @@
 ---
-- include_role:
+- name: Installing andrewrothstein.temurin
+  ansible.builtin.include_role:
     name: andrewrothstein.temurin
   vars:
     openjdk_app: jdk
-- name: resolve platform specific vars
-  include_vars: '{{ item }}'
+- name: Resolve platform specific vars
+  ansible.builtin.include_vars: '{{ item }}'
   with_first_found:
     - files:
         - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
@@ -13,18 +14,18 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: downloading {{ bazelisk_url }} to {{ bazelisk_install_exe }}
+- name: Downloading {{ bazelisk_url }} to {{ bazelisk_install_exe }}
   become: true
   become_user: root
-  get_url:
+  ansible.builtin.get_url:
     url: '{{ bazelisk_url }}'
     dest: '{{ bazelisk_install_exe }}'
-    mode: 0755
+    mode: '755'
     checksum: '{{ bazelisk_checksum }}'
-- name: linking {{ bazelisk_link }} to {{ bazelisk_install_exe }}
+- name: Linking {{ bazelisk_link }} to {{ bazelisk_install_exe }}
   become: true
   become_user: root
-  file:
+  ansible.builtin.file:
     src: '{{ bazelisk_install_exe }}'
     dest: '{{ bazelisk_link }}'
     state: link

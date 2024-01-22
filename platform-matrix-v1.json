@@ -11,10 +11,10 @@
     "OS": "alpine",
     "OS_VER": "edge"
   },
-    {
-        "OS": "debian",
-        "OS_VER": "bookworm"
-    },
+  {
+    "OS": "debian",
+    "OS_VER": "bookworm"
+  },
   {
     "OS": "debian",
     "OS_VER": "bullseye"
