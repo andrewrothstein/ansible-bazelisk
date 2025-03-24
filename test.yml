@@ -3,3 +3,11 @@
   hosts: all
   roles:
     - role: '{{ playbook_dir }}'
+  tasks:
+    - name: Executing 'bazel --version'
+      ansible.builtin.command: bazel --version
+      changed_when: false
+      register: bazelisk_test_output
+    - name: Output of 'bazel --version'
+      ansible.builtin.debug:
+        msg: '{{ bazelisk_test_output.stdout }}'
