@@ -30,6 +30,7 @@ dl_ver() {
     dl $ver linux amd64
     dl $ver linux arm64
     dl $ver windows amd64 .exe
+    dl $ver windows arm64 .exe
 }
 
-dl_ver ${1:-v1.26.0}
+dl_ver ${1:-v1.28.1}
