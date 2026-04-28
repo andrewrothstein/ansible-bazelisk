@@ -33,4 +33,4 @@ dl_ver() {
     dl $ver windows arm64 .exe
 }
 
-dl_ver ${1:-v1.28.1}
+dl_ver ${1:-v1.29.0}
