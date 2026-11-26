@@ -34,3 +34,5 @@ galaxy_info:
         - jammy
         - noble
   role_name: bazelisk
+dependencies:
+  - role: andrewrothstein.alpineglibcshim
